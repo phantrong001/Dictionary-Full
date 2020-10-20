@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<SplitPane dividerPositions="0.3186372745490982" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+            <children>
+                <TextField fx:id="searchText" layoutX="10.0" layoutY="92.0" prefHeight="31.0" prefWidth="287.0" promptText="Search Word" />
+                <Button layoutX="14.0" layoutY="129.0" mnemonicParsing="false" onAction="#Search" prefHeight="31.0" prefWidth="73.0" text="Search" />
+                <TableView fx:id="table2" layoutY="221.0" prefHeight="571.0" prefWidth="307.0">
+                    <columns>
+                        <TableColumn fx:id="targetColumn2" prefWidth="149.0" text="Target" />
+                        <TableColumn fx:id="explainColumn2" prefWidth="136.0" text="Explain" />
+                    </columns>
+                </TableView>
+                <Label layoutX="77.0" layoutY="8.0" prefHeight="50.0" prefWidth="154.0" text="Dictionary">
+               <font>
+                  <Font size="34.0" />
+               </font></Label>
+            <Button layoutX="14.0" layoutY="169.0" mnemonicParsing="false" onAction="#DeleteSearch" text="Xóa lịch sử tìm kiếm" />
+            <Label layoutX="99.0" layoutY="200.0" text="Bảng tìm kiếm" textFill="#1107f5" />
+            <Button layoutX="174.0" layoutY="129.0" mnemonicParsing="false" onAction="#DataBase2" prefHeight="31.0" prefWidth="130.0" text="Xem chi tiết -&gt;" />
+            <Button layoutX="174.0" layoutY="169.0" mnemonicParsing="false" onAction="#DeleteDataBase" text="Xóa database -&gt;" />
+            <Label layoutX="14.0" layoutY="65.0" text="Thực hiện các chức năng với bảng tìm kiếm" />
+            <Button layoutX="99.0" layoutY="129.0" mnemonicParsing="false" onAction="#Hear2" prefHeight="31.0" prefWidth="67.0" text="Nghe" />
+            </children></AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="798.0" prefWidth="765.0">
+            <children>
+                <TableView fx:id="table" layoutX="9.0" layoutY="226.0" prefHeight="565.0" prefWidth="450.0">
+                    <columns>
+                        <TableColumn fx:id="targetColumn" prefWidth="224.0" text="Target" />
+                        <TableColumn fx:id="explainColumn" prefWidth="225.0" text="Explain" />
+                    </columns>
+                </TableView>
+                <TextField fx:id="targetText" layoutX="519.0" layoutY="278.0" prefHeight="31.0" prefWidth="154.0" promptText="từ vựng" />
+                <TextField fx:id="explainText" layoutX="519.0" layoutY="332.0" prefHeight="31.0" prefWidth="154.0" promptText="nghĩa từ vựng" />
+                <Button layoutX="481.0" layoutY="374.0" mnemonicParsing="false" onAction="#Add" prefHeight="50.0" prefWidth="73.0" text="Thêm" />
+                <Button layoutX="587.0" layoutY="374.0" mnemonicParsing="false" onAction="#Delete" prefHeight="50.0" prefWidth="73.0" text="Xóa" />
+                <TextField fx:id="repairText" layoutX="475.0" layoutY="553.0" promptText="nghĩa mới" />
+                <Button layoutX="543.0" layoutY="469.0" mnemonicParsing="false" onAction="#Repair" prefHeight="42.0" prefWidth="58.0" text="Sửa" />
+                <Label layoutX="480.0" layoutY="224.0" prefHeight="26.0" prefWidth="187.0" text="Thực hiện các chức năng">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                </Label>
+                <Label layoutX="474.0" layoutY="283.0" text="Target" />
+                <Label layoutX="470.0" layoutY="337.0" text="Explain" />
+                <Label layoutX="502.0" layoutY="511.0" lineSpacing="2.0" text="(Chọn từ trong bảng" />
+                <Label layoutX="503.0" layoutY="532.0" text="để sửa nghĩa của từ)" />
+            <Button layoutX="494.0" layoutY="637.0" mnemonicParsing="false" onAction="#Hear1" prefHeight="50.0" prefWidth="140.0" text="Nghe" />
+            <Label layoutX="190.0" layoutY="203.0" text="Bảng Từ Điển" textFill="#ee0909" />
+            <TableView fx:id="listView" layoutX="9.0" layoutY="3.0" prefHeight="200.0" prefWidth="662.0">
+              <columns>
+                <TableColumn fx:id="targetColumn3" prefWidth="107.0" text="Từ" />
+                <TableColumn fx:id="explainColumn3" prefWidth="575.0" text="Nghĩa chi tiết" />
+              </columns>
+            </TableView>
+            <Button layoutX="494.0" layoutY="700.0" mnemonicParsing="false" onAction="#DataBase1" prefHeight="50.0" prefWidth="140.0" text="Xem nghĩa chi tiết" />
+            <Label layoutX="513.0" layoutY="250.0" text="với bảng từ điển" />
+            </children></AnchorPane>
+    </items>
+</SplitPane>
