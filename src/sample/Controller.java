@@ -156,6 +156,10 @@ public class Controller implements Initializable {
     }
 
     public void Search(ActionEvent e) {
+        for (int i=0; i<WordSearch.size(); i++) {
+            WordSearch.remove(WordSearch.get(i));
+            i--;
+        }
         for (int i=0 ; i<WordList.size(); i++) {
             Word searchWord = new Word();
             if (WordList.get(i).getWord_target().startsWith(searchText.getText())) {

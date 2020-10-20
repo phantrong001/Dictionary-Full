@@ -30,7 +30,7 @@
             <Button layoutX="174.0" layoutY="129.0" mnemonicParsing="false" onAction="#DataBase2" prefHeight="31.0" prefWidth="130.0" text="Xem chi tiết -&gt;" />
             <Button layoutX="174.0" layoutY="169.0" mnemonicParsing="false" onAction="#DeleteDataBase" text="Xóa database -&gt;" />
             <Label layoutX="14.0" layoutY="65.0" text="Thực hiện các chức năng với bảng tìm kiếm" />
-            <Button layoutX="99.0" layoutY="129.0" mnemonicParsing="false" onAction="#Hear2" text="Nghe" />
+            <Button layoutX="99.0" layoutY="129.0" mnemonicParsing="false" onAction="#Hear2" prefHeight="31.0" prefWidth="67.0" text="Nghe" />
             </children></AnchorPane>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="798.0" prefWidth="765.0">
             <children>
